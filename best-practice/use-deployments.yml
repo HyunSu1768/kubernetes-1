@@ -3,14 +3,14 @@ kind: Deployment
 metadata:
   name: my-deployments
 spec:
-  replicas: 3
+  replicas: 3 # 복제본 개수
   selector:
-    matchLabels:
+    matchLabels: # label selector
       app: mukgen-app
   template:
     metadata:
       labels:
-        app: mukgen-app
+        app: mukgen-app # label selector가 이 라벨을 보고 파드를 관리함
     spec:
       containers:
       - name: mukgen
