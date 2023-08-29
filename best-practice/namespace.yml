@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: my-app
+  namespace: my-namespace
+spec:
+  containers:
+  - name: mukgen-container
+    image: hyunsu1768/mukgen:latest
+    ports:
+    - containerPort: 80
+
+# 명령어
+# kubectl config set-context --current --namespace=네임스페이스 이름 <- namespace 변경
+# kubectl create namespace 네임스페이스이름 <- 네임스페이스 생성
