@@ -2,10 +2,10 @@ apiVersion: v1
 kind: Pod
 metadata:
   name: my-pod
-  labels:
+  labels: # 쿠버네티스 컨트롤러가 파드들을 관리할때 파드를 구분하는 역할을 함
     app: my-app
     environment: production
-  annotations:
+  annotations: # 쿠버네티스에서 필요한 정보들을 표시해 주기 위해 사용함
     config: "https://my-config.com"
   spec:
     containers:
