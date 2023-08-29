@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployments
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mukgen-app
+  template:
+    metadata:
+      labels:
+        app: mukgen-app
+    spec:
+      containers:
+      - name: mukgen
+        image: hyunsu1768/mukgen:latest
+        ports:
+        - containerPort: 80
